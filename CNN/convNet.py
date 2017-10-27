@@ -11,7 +11,7 @@ def convNet(features, mode):
     with tf.name_scope('conv1'):
         conv1 = tf.layers.conv2d(
             inputs=input_layer,
-            filters=32,
+            filters=16,
             kernel_size=3,
             padding="same",
             activation=tf.nn.relu,
@@ -30,7 +30,7 @@ def convNet(features, mode):
     with tf.name_scope('conv2'):
         conv2 = tf.layers.conv2d(
             inputs=pool1,
-            filters=64,
+            filters=32,
             kernel_size=3,
             padding="same",
             activation=tf.nn.relu,
@@ -49,7 +49,7 @@ def convNet(features, mode):
     with tf.name_scope('conv3'):
         conv3 = tf.layers.conv2d(
             inputs=pool2,
-            filters=128,
+            filters=64,
             kernel_size=3,
             padding="same",
             activation=tf.nn.relu,
@@ -98,7 +98,7 @@ def convNet(features, mode):
 
     # dropout
     fc1_dropout = tf.layers.dropout(
-        inputs=fc1, rate=0.3, training=tf.equal(mode, learn.ModeKeys.TRAIN), name='fc1_dropout')
+        inputs=fc1, rate=0.5, training=tf.equal(mode, learn.ModeKeys.TRAIN), name='fc1_dropout')
 
     # 全链接层
     with tf.name_scope('fc2'):
@@ -112,7 +112,7 @@ def convNet(features, mode):
 
     # dropout
     fc2_dropout = tf.layers.dropout(
-        inputs=fc2, rate=0.3, training=tf.equal(mode, learn.ModeKeys.TRAIN), name='fc2_dropout')
+        inputs=fc2, rate=0.1, training=tf.equal(mode, learn.ModeKeys.TRAIN), name='fc2_dropout')
 
     # Logits层   对输出Tensor执行分类操作
     with tf.name_scope('out'):
@@ -125,4 +125,3 @@ def convNet(features, mode):
         tf.summary.histogram('act', logits)
 
     return logits
- 

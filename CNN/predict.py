@@ -30,7 +30,7 @@ logits = convNet(x, learn.ModeKeys.INFER)
 # step 3：运算graph
 with tf.Session() as sess:
     saver = tf.train.Saver()
-    summary_dir = 'E:\\OnlineIR\\logs\\summary\\'
+    summary_dir = 'E:/OnlineIR/logs/summary/'
     model_file = tf.train.latest_checkpoint(summary_dir)
     saver.restore(sess, model_file)
     predictions = sess.run([tf.argmax(logits, 1)], feed_dict={x: x_train})

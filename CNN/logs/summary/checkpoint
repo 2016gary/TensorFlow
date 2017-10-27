@@ -1,2 +1,2 @@
-model_checkpoint_path: "10-image.ckpt-0"
-all_model_checkpoint_paths: "10-image.ckpt-0"
+model_checkpoint_path: "10-image.ckpt-3"
+all_model_checkpoint_paths: "10-image.ckpt-3"
