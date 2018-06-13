@@ -30,7 +30,3 @@
 
 ### EMBEDDINGS:
 ![](https://i.imgur.com/fAHgRl4.png)
-
-
-
-### （可以看到模型已经过拟合了，由于把笔记本当服务器跑，GPU烧坏了还没时间去修，所以精确度徘徊在70%，接下来做了一下数据增强，按道理讲应该能到80%，再使用regularization loss、dropout、调一下learning rate应该能到90%，本人的美好愿望。。。）
