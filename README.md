@@ -32,6 +32,8 @@
 ![](https://i.imgur.com/fAHgRl4.png)
 
 ---
+# Kaggle比赛：
+
 # CIFAR-10
 ![](https://i.imgur.com/KBNkOS6.png)
 
