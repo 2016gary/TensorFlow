@@ -1,4 +1,4 @@
-# 记录本人成为TF boys的心路历程：
+# 记录成为TF boys的心路历程：
 # CNN、RNN、GAN
 
 ---
