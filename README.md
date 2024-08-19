@@ -8,7 +8,14 @@
       year={2017}
     }
 
-## 1.使用TensorBoard展示训练信息：
+## 1.CNN模型架构：
+### 以AlexNet模型为例，AlexNet是IMAGENET Challenge2012的获奖解决方案，这是最受欢迎的计算机视觉挑战之一，2012年是第一次使用深度学习来解决这个问题。
+<img src="./readme_img/CNN/AlexNet.png" alt="图片无法显示"/>
+
+## 2.使用TensorFlow训练CNN模型：
+<img src="./readme_img/CNN/TF_CNN.png" alt="图片无法显示"/>
+
+## 3.使用TensorBoard展示训练信息：
 ### IMAGES:
 ![](https://i.imgur.com/cmLOn1r.png)
 
@@ -27,27 +34,27 @@
 ### EMBEDDINGS:
 ![](https://i.imgur.com/fAHgRl4.png)
 
-## 2.使用训练好的模型参加Kaggle CIFAR-10比赛结果：
+## 4.使用训练好的模型参加Kaggle CIFAR-10比赛结果：
 ![](https://i.imgur.com/KBNkOS6.png)
 
 ### Visualize kernel：
-<img src="./readme_img/CIFAR-10/kernel_change.gif" alt="图片无法显示"/>
+<img src="./readme_img/CNN/CIFAR-10/kernel_change.gif" alt="图片无法显示"/>
 
-## 3.训练过程中遇到的问题
-### 3.1 非均衡数据集（Imbalance Data Set）的分类问题
+## 5.训练过程中遇到的问题
+### 5.1 非均衡数据集（Imbalance Data Set）的分类问题
 ### 以Kaggle Dog Breed Identification比赛对120种狗的品种分类数据为例（Kaggle比赛入口：[dog-breed-identification](https://www.kaggle.com/c/dog-breed-identification "dog-breed-identification") ）
 
-<img src="./readme_img/Dog-Breed-Identification/dog-breed.PNG" alt="无法显示该图片" width="90%" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/dog-breed.PNG" alt="无法显示该图片" width="90%" />
 
 ### 机器学习分类算法面对不均衡数据分类时性能下降的原因很多，例如不恰当的性能评价准则、不恰当的归纳偏置、某类样本数据过少产生的绝对稀少问题、各类样本数据相差悬殊产生的相对稀少问题以及采取分而治之策略算法所独有的数据碎片问题和噪音等。
 
 ### Kaggle上网友给出的kernel将120种狗的数据可视化展示：
 
-<img src="./readme_img/Dog-Breed-Identification/kernel1.png" alt="无法显示该图片" width="60%" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/kernel1.png" alt="无法显示该图片" width="60%" />
 
 ### 图片来自：[SebastianHuber-DogBreedDataVisualisation](https://www.kaggle.com/methindor/dogbreeddatavisualisation "DogBreedDataVisualisation") 
 
-<img src="./readme_img/Dog-Breed-Identification/kernel2.png" alt="无法显示该图片" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/kernel2.png" alt="无法显示该图片" />
 
 ### 图片来自：[nh4clbreed-distribution plots](https://www.kaggle.com/placidpanda/breed-distribution-plots "distribution plot") 
 
@@ -60,7 +67,7 @@
 ### 改进分类算法
 ### 对已有分类算法的改进，主要是通过调节各类样本之间的代价函数、对于不同类的样本设置不同的权值、改变概率密度、调整分类边界等措施使其更有利于少数类的分类。
 
-### 3.2 训练数据集Image Size不同
+### 5.2 训练数据集Image Size不同
 ### 为什么需要输入固定大小的图片？
 ### 事实上全连接层是制约输入大小的关键因素，因为卷积和池化层不需要输入固定大小的数据，只需要拿到前一层的Feature Map，然后做卷积池化输出，只有全连接层因为权重维度固定不能改，所以层层向回看导致所有输入都必须固定大小。
 ### 解决办法
@@ -68,13 +75,13 @@
 - Resize&Crop：比如对于ImageNet，通常都是将图像的宽缩放到256, 然后再随机Crop224X224大小的图片作为训练样本。
 - SPP(Spatial Pyramid Pooling空间金字塔池化)：SPP-Net思想在检测算法RFCN中用到，即在所有卷积层结束后得到不同size的feature map，然后在不同尺寸的feature map上画上固定大小的方格，在方格里面取个平均。
 
-### 3.3 Preprocess训练数据集Resize大小问题
+### 5.3 Preprocess训练数据集Resize大小问题
 ### 通常因为GPU计算能力受限，会将原数据集Resize到更小的大小进行训练，这种做法其实对模型影响并不大，只要Resize到人类主观可分辨的大小，理论上模型就能学习到相应的特征。
 
-### 3.4 训练数据归一化处理
+### 5.4 训练数据归一化处理
 ### 如果对训练数据集进行减去均值归一化处理（每个像素值都分布在0~1），则需对验证集和测试集（包括使用模型预测时）进行相同操作。
 
-### 3.5 Data Augmentation
+### 5.5 Data Augmentation
 ### 常用数据增强方法例如平移、翻转、旋转、白化等，但是本人在实际训练过程中并没有发现能给模型带来很大的效果，个人觉得CNN作为特征提取器提取一些轮廓的特征以及这些轮廓组合起来更为复杂的高级特征，最直接有效的数据增强手段应该是改变所需要识别的物体的背景轮廓复杂度，这应该是最为直接有效的，越大的训练数据集能使模型鲁棒性更好，原因也主要是大量数据所需要识别物体的背景更为复杂，CNN学习特征时能够去排除识别干扰因素。
 
 ### 参考：
