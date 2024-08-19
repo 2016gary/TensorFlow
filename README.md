@@ -13,7 +13,7 @@
 <img src="./readme_img/CNN/AlexNet.png" alt="图片无法显示"/>
 
 ## 2.使用TensorFlow训练CNN模型：
-<img src="./readme_img/CNN/TF_CNN.png" alt="图片无法显示"/>
+<img src="./readme_img/CNN/TF_CNN.png" alt="图片无法显示" width="200%" />
 
 ## 3.使用TensorBoard展示训练信息：
 ### IMAGES:
