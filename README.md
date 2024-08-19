@@ -41,8 +41,6 @@
 
 ### 机器学习分类算法面对不均衡数据分类时性能下降的原因很多，例如不恰当的性能评价准则、不恰当的归纳偏置、某类样本数据过少产生的绝对稀少问题、各类样本数据相差悬殊产生的相对稀少问题以及采取分而治之策略算法所独有的数据碎片问题和噪音等。
 
-<img src="./readme_img/Dog-Breed-Identification/unbalanced.PNG" alt="无法显示该图片" />
-
 ### Kaggle上网友给出的kernel将120种狗的数据可视化展示：
 
 <img src="./readme_img/Dog-Breed-Identification/kernel1.png" alt="无法显示该图片" />
