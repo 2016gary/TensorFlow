@@ -42,11 +42,11 @@
 
 ## 5.训练过程中遇到的问题
 ### 5.1 非均衡数据集（Imbalance Data Set）的分类问题
+### 机器学习分类算法面对不均衡数据分类时性能下降的原因很多，例如不恰当的性能评价准则、不恰当的归纳偏置、某类样本数据过少产生的绝对稀少问题、各类样本数据相差悬殊产生的相对稀少问题以及采取分而治之策略算法所独有的数据碎片问题和噪音等。
+
 ### 以Kaggle Dog Breed Identification比赛对120种狗的品种分类数据为例（Kaggle比赛入口：[dog-breed-identification](https://www.kaggle.com/c/dog-breed-identification "dog-breed-identification") ）
 
 <img src="./readme_img/CNN/Dog-Breed-Identification/dog-breed.PNG" alt="无法显示该图片" width="90%" />
-
-### 机器学习分类算法面对不均衡数据分类时性能下降的原因很多，例如不恰当的性能评价准则、不恰当的归纳偏置、某类样本数据过少产生的绝对稀少问题、各类样本数据相差悬殊产生的相对稀少问题以及采取分而治之策略算法所独有的数据碎片问题和噪音等。
 
 ### Kaggle上网友给出的kernel将120种狗的数据可视化展示：
 
