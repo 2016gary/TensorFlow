@@ -1,5 +1,5 @@
 # 记录成为TF boys的心路历程：
-# 一、CNN
+# CNN
 ### CNN模型所使用的数据集：
     @misc{e-VDS,
       author = {Culurciello, Eugenio and Canziani, Alfredo},
