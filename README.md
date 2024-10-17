@@ -38,7 +38,7 @@
 ![](https://i.imgur.com/KBNkOS6.png)
 
 ### Visualize kernel：
-<img src="./readme_img/CNN/CIFAR-10/kernel_change.gif" alt="图片无法显示"/>
+<img src="./readme_img/CNN/CIFAR-10/kernel_change.gif" alt="图片无法显示" width="90%" />
 
 ## 5.训练过程中遇到的问题
 ### 5.1 非均衡数据集（Imbalance Data Set）的分类问题
@@ -46,17 +46,17 @@
 
 ### 以Kaggle Dog Breed Identification比赛对120种狗的品种分类数据为例（Kaggle比赛入口：[dog-breed-identification](https://www.kaggle.com/c/dog-breed-identification "dog-breed-identification") ）
 
-<img src="./readme_img/CNN/Dog-Breed-Identification/dog-breed.PNG" alt="无法显示该图片" width="90%" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/dog-breed.PNG" alt="无法显示该图片" />
 
-### Kaggle上网友给出的kernel将120种狗的数据可视化展示：
+### Kaggle上给出的kernel将120种狗的数据可视化展示：
 
-<img src="./readme_img/CNN/Dog-Breed-Identification/kernel1.png" alt="无法显示该图片" width="60%" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/kernel1.png" alt="无法显示该图片" />
 
-### 图片来自：[SebastianHuber-DogBreedDataVisualisation](https://www.kaggle.com/methindor/dogbreeddatavisualisation "DogBreedDataVisualisation") 
+#### 图片来自：[SebastianHuber-DogBreedDataVisualisation](https://www.kaggle.com/methindor/dogbreeddatavisualisation "DogBreedDataVisualisation") 
 
-<img src="./readme_img/CNN/Dog-Breed-Identification/kernel2.png" alt="无法显示该图片" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/kernel2.png" alt="无法显示该图片" width="90%" />
 
-### 图片来自：[nh4clbreed-distribution plots](https://www.kaggle.com/placidpanda/breed-distribution-plots "distribution plot") 
+#### 图片来自：[nh4clbreed-distribution plots](https://www.kaggle.com/placidpanda/breed-distribution-plots "distribution plot") 
 
 ### 现有的对策主要有两大方向：一是从数据集的角度，即重构数据集，通过数据预处理的方法解决；另一个是从算法角度，即改进分类算法，主要通过对不同类样本设置不同的权值、改变概率密度、调整分类边界等措施解决。
 ### 重构数据集
@@ -84,7 +84,7 @@
 ### 5.5 Data Augmentation
 ### 常用数据增强方法例如平移、翻转、旋转、白化等，但是本人在实际训练过程中并没有发现能给模型带来很大的效果，个人觉得CNN作为特征提取器提取一些轮廓的特征以及这些轮廓组合起来更为复杂的高级特征，最直接有效的数据增强手段应该是改变所需要识别的物体的背景轮廓复杂度，这应该是最为直接有效的，越大的训练数据集能使模型鲁棒性更好，原因也主要是大量数据所需要识别物体的背景更为复杂，CNN学习特征时能够去排除识别干扰因素。
 
-### 参考：
+#### 参考：
 - [深度学习任务面临非平衡数据问题？试试这个简单方法](https://juejin.im/entry/5b0ceb35f265da08f66516a0 "深度学习任务面临非平衡数据问题？试试这个简单方法") 
 - [从重采样到数据合成：如何处理机器学习中的不平衡分类问题？](https://www.jiqizhixin.com/articles/2017-03-20-8 "从重采样到数据合成：如何处理机器学习中的不平衡分类问题？") 
 - [数据增强：数据有限时如何使用深度学习？](https://www.leiphone.com/news/201805/avOH5g1ZX3lAbmjp.html "数据增强：数据有限时如何使用深度学习？") 
