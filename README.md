@@ -38,7 +38,7 @@
 ![](https://i.imgur.com/KBNkOS6.png)
 
 ### Visualize kernel：
-<img src="./readme_img/CNN/CIFAR-10/kernel_change.gif" alt="图片无法显示" width="90%" />
+<img src="./readme_img/CNN/CIFAR-10/kernel_change.gif" alt="图片无法显示" width="80%" />
 
 ## 5.训练过程中遇到的问题
 ### 5.1 非均衡数据集（Imbalance Data Set）的分类问题
@@ -50,11 +50,11 @@
 
 ### Kaggle上给出的kernel将120种狗的数据可视化展示：
 
-<img src="./readme_img/CNN/Dog-Breed-Identification/kernel1.png" alt="无法显示该图片" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/kernel1.png" alt="无法显示该图片" width="80%" />
 
 #### 图片来自：[SebastianHuber-DogBreedDataVisualisation](https://www.kaggle.com/methindor/dogbreeddatavisualisation "DogBreedDataVisualisation") 
 
-<img src="./readme_img/CNN/Dog-Breed-Identification/kernel2.png" alt="无法显示该图片" width="90%" />
+<img src="./readme_img/CNN/Dog-Breed-Identification/kernel2.png" alt="无法显示该图片" width="60%" />
 
 #### 图片来自：[nh4clbreed-distribution plots](https://www.kaggle.com/placidpanda/breed-distribution-plots "distribution plot") 
 
